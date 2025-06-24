@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+   
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Romyk</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   </head>
+   <body>
+      
+
+  <!-- Floating Cart -->
+<div id="floating-cart" class="cream_box" style="position: fixed; top: 100px; right: 20px; width: 300px; z-index: 999;">
+   <div style="display: flex; justify-content: space-between; align-items: center;">
+      <h3 class="strawberry_text" style="margin: 0;">Carrito</h3>
+      <button onclick="toggleCart()" style="background: none; border: none; font-size: 20px; cursor: pointer;">−</button>
+   </div>
+
+   <div id="cart-content" style="margin-top: 15px;">
+      <ul id="cart-items" style="margin-bottom: 10px;"></ul>
+      <p class="price_text">Total: $<span id="cart-total">0.00</span></p>
+
+      <h4 class="strawberry_text" style="margin-top: 15px;">Payment</h4>
+      <div class="cart_bt" style="margin-top: 10px;">
+         <a href="#" onclick="pay('card')" style="background-color: #f15a24;">targeta</a>
+         <a href="#" onclick="pay('paypal')" style="background-color: #0070ba;">PayPal</a>
+         <a href="#" onclick="pay('cash')" style="background-color: #28a745;">efectivos</a>
+      </div>
+   </div>
+</div>
+
+
+
+      <div class="header_section">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="navbar-brand"href="index.html"><img src="img/logo4.png" style=" width: 100px;
+  height: 100px;  border-radius: 50%;
+  background: white;"a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="index.html">INICIO</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#Historia">HISTORIA </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#paletas">PALETAS </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#servi">SERVICIOS</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#blog">COMENTARIOS</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#cont">CONTACTANOS</a>
+                     </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                     <div class="login_bt"><a href="#">Login <span style="color: #222222;"><i class="fa fa-user" aria-hidden="true"></i></span></a></div>
+                     <div class="fa fa-search form-control-feedback"></div>
+                     <div class="cart_icon">
+   <a href="#" id="cart-toggle"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span id="cart-count">0</span></a>
+</div>
+
+                  </form>
+               </div>
+            </nav>
+         </div>
+         <!-- banner section start --> 
+         <div class="banner_section layout_padding" id="carru">
+            <div class="container">
+               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">01</li>
+                     <li data-target="#carouselExampleIndicators" data-slide-to="1">02</li>
+                     <li data-target="#carouselExampleIndicators" data-slide-to="2">03</li>
+                     <li data-target="#carouselExampleIndicators" data-slide-to="3">04</li>
+                  </ol>
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <h1 class="banner_taital">PALETA DE FRESA</h1>
+                              <p class="banner_text">Fresas frescas, agua, stevia echa a mano 100% artesanal sin azucar pensada especialmente para diabeticos</p>
+                            <div class="started_text"><a  class="nav-link" href="#paletas">Ordena ahora</a></div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="banner_img"><img src="img/fresasin2-removebg-preview.png"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <h1 class="banner_taital">PALETA DE MANGO</h1>
+                              <p class="banner_text">una paleta echa de mango, agua y stevia sin azucar regulando el sabor del mango para que tambien tu puedas disfrutar de su delicioso sabor </p>
+                              <div class="started_text"><a  class="nav-link" href="#paletas">Ordena ahora</a></div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="banner_img"><img src="img/mango-removebg-preview.png" style=" width: 400px;
+  height: 400px;  border-radius: 50%;"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <h1 class="banner_taital">PALETA DE COCO</h1>
+                              <p class="banner_text">Una paleta echa con leche de coco, stevia 0% azucar para no poner en riesgo su salud</p>
+                               <div class="started_text"><a  class="nav-link" href="#paletas">Ordena ahora</a></div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="banner_img"><img src="img/coco-removebg-preview.png"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <h1 class="banner_taital">PALETA DE SANDIA</h1>
+                              <p class="banner_text">una paleta echa a base de sandia regulando los niveles de azucar para tu salud</p>
+                             <div class="started_text"><a  class="nav-link" href="#paletas">Ordena ahora</a></div>
+                           </div>
+                           <div class="col-sm-6">
+                              <div class="banner_img"><img src="img/sandi2-removebg-preview.png"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- banner section end -->
+      </div>
+      <!-- header section end -->
+      <!-- about sectuion start -->
+      <div class="about_section layout_padding" id="Historia">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="about_img"><img src="images/about-img.png"></div>
+               </div>
+               <div class="col-md-6">
+                  <h1 class="about_taital">Nuestra historia </h1>
+                  <p class="about_text">Nosotros "DIASWEET" pensamos en que no todos podemos disfrutar de un postre tan delicioso como lo son las paletas de hielo asi que pensamos en que hacer para que todos pudieran disfrutarlas y asi fue como nacio "DIASWEET" que desarrolla paletas 100% naturales sin azucares conservando los sabores originales y echos 100% artesanalmente ahora no tendras que preocuparte en si te haran daño las paletas ya que estas remplazan la azucar por stevia que es mas saludable  </p>
+                
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- about sectuion end -->
+      <!-- cream sectuion start -->
+      <div class="cream_section layout_padding" id="paletas">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="cream_taital">Nuestro menu</h1>
+                  <p class="cream_text">100% libre de azucar, asegurate de disfrutar cada uno de nuestros sabores :)</p>
+               </div>
+            </div>
+            <div class="cream_section_2">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="cream_box">
+                        <div class="cream_img"><img src="img/fresa.jpg" style="height: 200px; ; width: 200px; ;" ></div>
+                        <div class="price_text">$25</div>
+                        <h6 class="strawberry_text">Paleta de fresa </h6>
+                       <div class="cart_bt"><a href="#" class="add-to-cart" data-name="Paleta de fresa " data-price="25">Agregar al carrito </a></div>
+
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="cream_box">
+                        <div class="cream_img"><img src="img/mango-removebg-preview.png" style="height: 200px; ; width: 200px; ;"></div>
+                        <div class="price_text">$30</div>
+                        <h6 class="strawberry_text">Paleta de mango</h6>
+                  <div class="cart_bt"><a href="#" class="add-to-cart" data-name="Paleta de mango " data-price="30">Agregar al carrito </a></div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="cream_box">
+                        <div class="cream_img"><img src="img/coco.jpg"  style="height: 200px; ; width: 200px; ;"></div>
+                        <div class="price_text">$25</div>
+                        <h6 class="strawberry_text">Paleta de coco</h6>
+                    <div class="cart_bt"><a href="#" class="add-to-cart" data-name="Paleta de coco " data-price="25">Agregar al carrito </a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="cream_section_2">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="cream_box">
+                        <div class="cream_img"><img src="img/sandi2.jpg"  style="height: 200px; ; width: 200px; ;"></div>
+                        <div class="price_text">$38</div>
+                        <h6 class="strawberry_text">Paleta de sandia </h6>
+                    <div class="cart_bt"><a href="#" class="add-to-cart" data-name="Paleta de sandia " data-price="38">Agregar al carrito </a></div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="cream_box">
+                        <div class="cream_img"><img src="img/helado.jpg" style="height: 200px; ; width: 200px; ;"></div>
+                        <div class="price_text">$100</div>
+                        <h6 class="strawberry_text">Helado de arandano sin azucar </h6>
+                         <div class="cart_bt"><a href="#" class="add-to-cart" data-name="Helado de arandano  " data-price="100">Agregar al carrito </a></div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="cream_box">
+                        <div class="cream_img"><img src="img/nuez.jpeg" style="height: 200px; ; width: 200px; ;"></div>
+                        <div class="price_text">$150</div>
+                        <h6 class="strawberry_text">Helado de nuez sin azucar </h6>
+                         <div class="cart_bt"><a href="#" class="add-to-cart" data-name="Helado de nuez  " data-price="150">Agregar al carrito </a></div>iv>
+                     </div> 
+                     
+                     
+                  </div>
+               </div>
+            </div>
+            <div class="seemore_bt"><a href="index.html">volver</a></div>
+         </div>
+      </div>
+      <!-- cream sectuion end -->
+      <!-- services section start -->
+      <div class="services_section layout_padding" id="servi">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="services_taital">SEVICIOS</h1>
+                
+               </div>
+            </div>
+            <div class="services_section_2">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="services_box">
+                        <h5 class="tasty_text"><span class="icon_img"><img src="images/icon-1.png"></span>paletas</h5>
+                        <p class="lorem_text">contamos con un servicio de paletas del sabor que tu quieras para tus eventos </p>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="services_box">
+                        <h5 class="tasty_text"><span class="icon_img"><img src="images/icon-2.png"></span>helados</h5>
+                        <p class="lorem_text">tambien tenemos helados elavorados 100% natural a base de yogurt y sin azucar tambien puedes hacer pedidos de este </p>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="services_box">
+                        <h5 class="tasty_text"><span class="icon_img"><img src="images/icon-1.png"></span>raspados</h5>
+                        <p class="lorem_text">hacemos raspados con agua y fruta 100% natural con los ingredientes mas nutritivos </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="seemore_bt"><a href="#">Read More</a></div>
+         </div>
+      </div>
+      <!-- services section end -->
+      <!-- testimonial section start -->
+      <div class="testimonial_section layout_padding" id="blog">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="testimonial_taital">COMENTARIOS</h1>
+               </div>
+            </div>
+            <div class="testimonial_section_2">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="testimonial_box">
+                        <div id="main_slider" class="carousel slide" data-ride="carousel">
+                           <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                 <p class="testimonial_text">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</p>
+                                 <h4 class="client_name">Marri Fen</h4>
+                                 <div class="client_img"><img src="images/client-img.png"></div>
+                              </div>
+                              <div class="carousel-item">
+                                 <p class="testimonial_text">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</p>
+                                 <h4 class="client_name">Marri Fen</h4>
+                                 <div class="client_img"><img src="images/client-img.png"></div>
+                              </div>
+                              <div class="carousel-item">
+                                 <p class="testimonial_text">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</p>
+                                 <h4 class="client_name">Marri Fen</h4>
+                                 <div class="client_img"><img src="images/client-img.png"></div>
+                              </div>
+                           </div>
+                           <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                           <i class="fa fa-angle-left"></i>
+                           </a>
+                           <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                           <i class="fa fa-angle-right"></i>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- testimonial section end -->
+      <!-- contact section start -->
+      <div class="contact_section layout_padding" id="cont">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="contact_main">
+                     <h1 class="contact_taital">CONTACTANOS</h1>
+                     <form action="/action_page.php">
+                        <div class="form-group">
+                           <input type="text" class="email-bt" placeholder="Nombre" name="Name">
+                        </div>
+                        <div class="form-group">
+                           <input type="text" class="email-bt" placeholder="Email" name="Name">
+                        </div>
+                        <div class="form-group">
+                           <input type="text" class="email-bt" placeholder="telefono" name="Email">
+                        </div>
+                        <div class="form-group">
+                           <textarea class="massage-bt" placeholder="mensaje" rows="5" id="comment" name="Massage"></textarea>
+                        </div>
+                     </form>
+                     <div class="main_bt"><a href="#">enviar</a></div>
+                  </div>
+               </div>
+               <div class="col-md-8">
+                  <div class="location_text">
+                     <ul>
+                        <li>
+                           <a href="#">
+                           <span class="padding_left_10 active"><i class="fa fa-map-marker" aria-hidden="true"></i></span>Making this the first true</a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <span class="padding_left_10"><i class="fa fa-phone" aria-hidden="true"></i></span>Tel:5540700841
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                           <span class="padding_left_10"><i class="fa fa-envelope" aria-hidden="true"></i></span>Email : demo@gmail.com
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="mail_main">
+                     <h3 class="newsletter_text">correo</h3>
+                     <div class="form-group">
+                        <textarea class="update_mail" placeholder="tu Email" rows="5" id="comment" name="Enter Your Email"></textarea>
+                        <div class="subscribe_bt"><a href="#">Suscribete</a></div>
+                     </div>
+                  </div>
+                  <div class="footer_social_icon">
+                     <ul>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- contact section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free Html Templates</a> Distribution by <a href="https://themewagon.com">ThemeWagon</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   <script>
+   const cart = [];
+
+   function updateCart() {
+      const cartItems = document.getElementById('cart-items');
+      const cartTotal = document.getElementById('cart-total');
+      cartItems.innerHTML = '';
+      let total = 0;
+
+      cart.forEach((item) => {
+         const li = document.createElement('li');
+         li.textContent = `${item.title} - $${item.price.toFixed(2)}`;
+         cartItems.appendChild(li);
+         total += item.price;
+      });
+
+      cartTotal.textContent = total.toFixed(2);
+   }
+
+   function pay(method) {
+      if (cart.length === 0) {
+         alert('Your cart is empty!');
+         return;
+      }
+
+      switch (method) {
+         case 'card':
+            window.location.href = 'pagotarjeta.html';
+            break;
+         case 'paypal':
+            window.location.href = 'pago_transferencia.php';
+            break;
+         case 'cash':
+            window.location.href = 'pago_efectivo.html';
+            break;
+      }
+   }
+
+   function toggleCart() {
+      const content = document.getElementById('cart-content');
+      const btn = event.target;
+      if (content.style.display === 'none') {
+         content.style.display = 'block';
+         btn.textContent = '−';
+      } else {
+         content.style.display = 'none';
+         btn.textContent = '+';
+      }
+   }
+
+   // Maneja añadir productos al carrito (si hay botones en productos)
+   document.querySelectorAll('.cart_bt a').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+         if (btn.closest('#floating-cart')) return; // no interceptar dentro del carrito
+         e.preventDefault();
+         const productBox = btn.closest('.cream_box');
+         const title = productBox.querySelector('.strawberry_text').textContent;
+         const price = parseFloat(productBox.querySelector('.price_text').textContent.replace('$', ''));
+
+         cart.push({ title, price });
+         updateCart();
+         alert(`${title} se agrego al carrito :)`);
+      });
+   });
+</script>
+
+
+
+   </body>
+</html>
